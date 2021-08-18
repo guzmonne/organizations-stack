@@ -95,7 +95,7 @@ export class Account extends Construct {
         AccountName: props.name,
         AccountType: props.type,
         StageName: props.stageName,
-        StageOrder: props.stageOrder,
+        StageOrder: props.stageOrder?.toString(),
         HostedServices: props.hostedServices ? props.hostedServices.join(":") : undefined
       }
     })
