@@ -16,7 +16,8 @@ An isolated set of secured environments.
 - A central billing system that controls the spending among environments.
 - A central activity view that provides visibility across environments.
 - A central users and permissions management service.
-An isolated DNS management zone to securely control your main DNS domains.
+- An isolated DNS management zone to securely control your main DNS domains.
+
 ### Developers
 
 Developers are members of an Organization that develop software.
@@ -65,16 +66,16 @@ The project requires ownership of a DNS domain. Each environment will then have 
 
 ## AWS SSO
 
-By configuring AWS SSO, all the actors will access any of the environments with the same set of credentials. It also simplifies the onboarding of new members and assignments of roles and permissions.
+By configuring AWS SSO, all the actors will access any environments with the same set of credentials. It also simplifies the onboarding of new members and assignments of roles and permissions.
 
 The following roles will be created:
 
-**AdministratorAccess**: Grants admin access to an AWS Account.
-**DeveloperAccess**: Allows developers to create, update, or delete AWS resources from an account, but prevents them from creating, updating, and deleting IAM users and groups.
-**DevOpsAccess**: Allows DevOps engineers to deploy and manage CI/CD pipelines.
-**ApproverAccess**: Allows users to view and approve manual changes for all pipelines.
-**ViewOnlyAccess**: Allows users to view resources and basic metadata across all AWS services.
-**BillingAccess**: Allows users to see the Billing details of an AWS Account.
+- **AdministratorAccess**: Grants admin access to an AWS Account.
+- **DeveloperAccess**: Allows developers to create, update, or delete AWS resources from an account, but prevents them from creating, updating, and deleting IAM users and groups.
+- **DevOpsAccess**: Allows DevOps engineers to deploy and manage CI/CD pipelines.
+- **ApproverAccess**: Allows users to view and approve manual changes for all pipelines.
+- **ViewOnlyAccess**: Allows users to view resources and basic metadata across all AWS services.
+- **BillingAccess**: Allows users to see the Billing details of an AWS Account.
 
 ## Billing
 
@@ -114,6 +115,19 @@ cdk bootstrap --cloudformation-execution-policies arn:aws:iam::aws:policy/Admini
 ```
 
 This will give CDK complete access to the account.
+
+### Custom Resources
+
+Not all AWS Services are available through CDK or even CloudFormation. So, to allow users to still configure these services through them, AWS provides "Custom Resources". Custom Resources enable you to write custom provisioning logic in templates that AWS CloudFormation runs anytime you create, update, or delete stacks.
+
+For CDK, a mini-framework is provided that helps to implement custom resources: `@aws-cdk/custom-resources`. It offers a high-level APU, which makes it easier to implement robust and powerful custom resources:
+
+- Handles response to AWS CloudFormation and protects against blocked deployments.
+- Validates handler return values to help with correct handler implementation.
+- Supports asynchronous handlers to enable operations requiring a long waiting period for a resource, exceeding the AWS Lambda timeout.
+- Implements default behavior for physical resource IDs.
+
+One of the classes it exposes is called `Provider`. We can configure lambda handlers to trigger `Create`, `Update`, or `Delete` events. The results of these functions can then be returned to be used by other constructs.
 
 ## AWS Toolkit for Visual Studio Code
 
@@ -227,6 +241,7 @@ Lastly, we can delete the whole stack by running `cdk destroy`.
 - [AWS CDK Developer Guide](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
 - [AWS CDK API Reference](https://docs.aws.amazon.com/cdk/api/latest/docs/aws-construct-library.html)
 - [AWS CDK Examples](https://github.com/aws-samples/aws-cdk-examples/tree/master/typescript)
+- [Custom Resources README](https://docs.aws.amazon.com/cdk/api/latest/docs/custom-resources-readme.html)
 - [Awesome CDK](https://github.com/kolomied/awesome-cdk)
 - [AWS Bootstrap Kit](https://github.com/aws-samples/aws-bootstrap-kit-examples)
 - [AWS Activate Workshop](https://activate.workshop.aws/)
