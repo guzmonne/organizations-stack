@@ -14,7 +14,7 @@ export class AccountProvider extends NestedStack {
    */
   public static getOrCreate(scope: Construct) {
     const stack = Stack.of(scope)
-    const uid = "empatho/infrastructure.AccountProvider"
+    const uid = "@aws-cdk/organizations.AccountProvider"
     return stack.node.tryFindChild(uid) as AccountProvider || new AccountProvider(stack, uid)
   }
   /**

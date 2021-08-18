@@ -1,5 +1,4 @@
 {
-  "profile": "empatho-root",
   "context": {
     "@aws-cdk/core:newStyleStackSynthesis": true,
     "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
@@ -15,7 +14,7 @@
     "@aws-cdk/aws-efs:defaultEncryptionAtRest": true,
     "@aws-cdk/aws-lambda:recognizeVersionProps": true,
     "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
-    "email": "guzman.monne@bairesdev.com",
+    "email": "email@example.com",
     "force_email_verification": false
   }
 }

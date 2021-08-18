@@ -26,7 +26,7 @@ export class ValidateEmailProvider extends NestedStack {
    */
   public static getOrCreate(scope: Construct, props: ValidateEmailProviderProps) {
     const stack = Stack.of(scope)
-    const uid = "empathp/infrastructure.ValidateEmailProvider"
+    const uid = "@aws-cdk/organizations.ValidateEmailProvider"
     return ((stack.node.tryFindChild(uid) as ValidateEmailProvider) || new ValidateEmailProvider(stack, uid, props))
   }
   /**
