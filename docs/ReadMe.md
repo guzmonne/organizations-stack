@@ -35,6 +35,20 @@ Deployment of upgrades to any environment should be done via blue / green deploy
 This builds on the work being performed in the organziations-stack project
 
 ![libdiagram](images/lib_diagram.png
-)
+)'
 
-Note:  If this could be driven off the changees to the account it might be interesting.  Detect changes to the repo - this will trigger deploying another pipeline pointing at the new repo.  Create works as is.  But update on the account triggers a new pipeline to be created if the repo is different.
+Driving the Pipeline off a CDK Custom Resource
+
+In additon to the possibility of creating a Lambda to create CDK pipelines, another possibility would be to create a Custom Resource representing pipeline.  
+
+This would need to executed in a CICD repo?  CICD account has rights to deploy to existing accounts?
+
+So the CICD account does not run pipeline inside the Child account - it runs pipeline to create pipelines in the account.
+
+CDKPipeline(accountID, repoProps)
+
+    Create - would create the pipeline and point to repo
+
+    Update - might disable the the pipeline 
+
+    Delete - would remove the pipeline 
