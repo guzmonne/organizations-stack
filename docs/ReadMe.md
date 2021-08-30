@@ -36,3 +36,5 @@ This builds on the work being performed in the organziations-stack project
 
 ![libdiagram](images/lib_diagram.png
 )
+
+Note:  If this could be driven off the changees to the account it might be interesting.  Detect changes to the repo - this will trigger deploying another pipeline pointing at the new repo.  Create works as is.  But update on the account triggers a new pipeline to be created if the repo is different.
