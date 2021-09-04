@@ -27,6 +27,7 @@ Deployment of upgrades to any environment should be done via blue / green deploy
 This builds on the work being performed in the organziations-stack project
 
 ![libdiagram](images/lib_diagram.png
+
 )
 
 Two new providers and custom resources will be added
@@ -44,5 +45,7 @@ Account-Pipeline-Branch would be the target
 ![newCustomResources](images/new-custom-resources.png
 )
 
+
+)
 
 
