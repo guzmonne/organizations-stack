@@ -1,0 +1,4 @@
+@startuml pipelineProvider
+PipelineProvicer-> PipelineLambda: create
+PipelineLambda-> CDKPipeline: create
+@enduml

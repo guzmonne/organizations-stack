@@ -1,7 +1,0 @@
-@startuml test
-AccountApp-> OganizationsStack2 : init 
-OganizationsStack2-> Organization: create
-OganizationsStack2-> Account: create
-OganizationsStack2-> GitBranchManager: create
-
-@enduml

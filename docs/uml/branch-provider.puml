@@ -1,0 +1,4 @@
+@startuml branchProvider
+BranchProvider -> BranchLambda: create
+BranchLambda-> GitBranch : create
+@enduml
