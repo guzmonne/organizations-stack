@@ -1,4 +1,4 @@
-Extending organizations-stack to support new workflow
+# Extending organizations-stack to support new workflow
 
 
 Very rough outline of what is proposed
@@ -27,10 +27,9 @@ Deployment of upgrades to any environment should be done via blue / green deploy
 This builds on the work being performed in the organziations-stack project
 
 ![libdiagram](images/lib_diagram.png
-
 )
 
-Two new providers and custom resources will be added
+## Two new providers and custom resources will be added
 
 ![branchProvider](images/branch-provider/branchProvider.png
 )
@@ -40,12 +39,11 @@ Two new providers and custom resources will be added
 
 It is intended that an association to existing account will be added 
 
-Account-Pipeline-Branch would be the target
+### Account-Pipeline-Branch would be the logical grouping
 
 ![newCustomResources](images/new-custom-resources.png
 )
 
 
-)
 
 
