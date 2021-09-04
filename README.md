@@ -1,8 +1,10 @@
 # Organizations Stack
 
-See this doc for additions made by this fork
+## See this doc for additions made by this fork
 
 [New Read Me](docs/ReadMe.md)
+
+## Original docs below
 
 CDK doesn't currently support AWS Organizations. Not even CloudFormation fully supports it. Luckily for us, CDK offers a workaround using Custom Resources.
 
