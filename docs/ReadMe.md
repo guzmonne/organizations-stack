@@ -66,7 +66,7 @@ The goal is to be able to provision set of "environments" for a "customer"
 ![ImmutablePipeline4](images/ImmutablePipeline-Page-4.png
 )
 
-##Development / Deployment Scenarios
+## Development / Deployment Scenarios
 
 + Feature Branch / Development integration
     + A Development Environment could contain enought accounts to allow multiple features to be worked on simultaneously
