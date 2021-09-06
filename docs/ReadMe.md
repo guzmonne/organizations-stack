@@ -44,6 +44,29 @@ It is intended that an association to existing account will be added
 ![newCustomResources](images/new-custom-resources.png
 )
 
+# Target Architecture 
 
+The goal is to be able to provision set of "environments" for a "customer"
+
+#### Customer Organization:
++ Shared Services Account
+    + DymamoDB - keep track of IP ranges
++ VPC linked to Transit Gateway
+
+#### Environment Organization 
++ 3 Work Accounts (maybe more?)
++ Shared Services Account
+    + RDS application DB
++ 2 Deployment Accounts
+    + CDK Pipeline in each account - initially pointing at template repo
+    + Blue Green Deployment from first to second or second to first
+
+
+
+
+
+
+![ImmutablePipeline4](images/ImmutablePipeline-Page-4.png
+)
 
 
