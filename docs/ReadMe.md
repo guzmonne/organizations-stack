@@ -78,9 +78,43 @@ The goal is to be able to provision set of "environments" for a "customer"
         + Possible to make changes in Staging and port back to develop for integration and testing 
         + Support Blue / Green Deployment
 
-
 + Production accounts
     + Support Blue / Green deployment
+
+
+## New Account Types
+
+export enum AccountType {
+  CICD = "CICD",
+  STAGE = "STAGE",
+  PLAYGROUND = "PLAYGROUND",
+  **CUSTOMER = "CUSTOMER"**,
+  **SHARED = "SHARED"**,
+  **WORK = "WORK"**
+}
+
+**Customer Accounts** 
++ VPC 
++ Transit Gateway 
++ DynamoDB instance
+
+**Shared Accounts** 
++ VPC 
++ RDS Database
+
+**Work Accounts**
++ VPC
++ Pipeline
+
+## New Interfaces 
++ VPCEnabled 
+    + Support Linking with Transit Gateway
+
+## New Organizaton Types ##
+
++ Customer
++ Environment
+
 
 
 ## Roadmap
@@ -89,4 +123,5 @@ The goal is to be able to provision set of "environments" for a "customer"
 + Stub out core components 
 + DSL for expressing the topology sitting above CDK engine?
 + Prove out CDK Pipeline deploying CDK pipelines to target accounts
+
 
