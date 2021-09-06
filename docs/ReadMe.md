@@ -113,7 +113,10 @@ export enum AccountType {
 ## New Organizaton Types ##
 
 + Customer
+    + Has Customer account
 + Environment
+    + Has Shared Services account
+    + Has X number of worker accounts
 
 
 
