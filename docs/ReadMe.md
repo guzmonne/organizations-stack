@@ -63,10 +63,24 @@ The goal is to be able to provision set of "environments" for a "customer"
 
 
 
-
-
-
 ![ImmutablePipeline4](images/ImmutablePipeline-Page-4.png
 )
+
+Development / Deployment Scenarios
+
++ Feature Branch / Development integration
+    + A Development Environment could contain enought accounts to allow multiple features to be worked on simultaneously
+    + Code could be merged back into the development branch itself using Blue / Green deployments 
+    + Testing could be done after merges before promoting branches to other environments
+
++ Multiple Staging accounts
+    + Multiple Staging Environments are possible for testing different scenarios for a customer
+        + Possible to make changes in Staging and port back to develop for integration and testing 
+        + Support Blue / Green Deployment
+
+
++ Production accounts
+    + Support Blue / Green deployment
+
 
 
