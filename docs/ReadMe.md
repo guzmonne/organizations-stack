@@ -83,4 +83,10 @@ The goal is to be able to provision set of "environments" for a "customer"
     + Support Blue / Green deployment
 
 
+## Roadmap
+
++ Finish Design including Transit Gatway 
++ Stub out core components 
++ DSL for expressing the topology sitting above CDK engine?
++ Prove out CDK Pipeline deploying CDK pipelines to target accounts
 
