@@ -1,5 +1,11 @@
 # Organizations Stack
 
+## See this doc for additions made by this fork
+
+[New Read Me](docs/ReadMe.md)
+
+## Original docs below
+
 CDK doesn't currently support AWS Organizations. Not even CloudFormation fully supports it. Luckily for us, CDK offers a workaround using Custom Resources.
 
 AWS has provided an open-source repository called [`aws-bootstrap-kit`](https://github.com/awslabs/aws-bootstrap-kit) that includes an opinionated way of how these custom resources could work. A companion repository called [`aws-bootstrap-kit-examples`](https://github.com/aws-samples/aws-bootstrap-kit-examples) shows how these constructs can be used.

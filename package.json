@@ -17,15 +17,16 @@
     "@types/aws-lambda": "^8.10.82",
     "@types/jest": "^26.0.24",
     "@types/jsforce": "^1.9.34",
-    "@types/sinon": "^10.0.2",
     "aws-cdk": "1.118.0",
     "aws-sdk": "^2.970.0",
     "aws-sdk-mock": "^5.2.2",
     "jest": "^26.6.3",
-    "sinon": "^11.1.2",
     "ts-jest": "^26.5.6",
     "ts-node": "^9.0.0",
-    "typescript": "~3.9.7"
+    "typescript": "~3.9.7",
+    "@sinonjs/fake-timers": "^6.0.1",
+    "@types/sinonjs__fake-timers": "^6.0.3",
+    "@types/sinon": "^7.0.1"
   },
   "dependencies": {
     "@aws-cdk/aws-apigateway": "^1.118.0",
@@ -39,6 +40,7 @@
     "@aws-cdk/aws-sns-subscriptions": "1.118.0",
     "@aws-cdk/aws-sqs": "1.118.0",
     "@aws-cdk/core": "^1.118.0",
-    "@aws-cdk/pipelines": "^1.118.0"
+    "@aws-cdk/pipelines": "^1.118.0",
+    "array-unique": "^0.3.2"
   }
 }

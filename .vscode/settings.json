@@ -27,5 +27,14 @@
     "!Select sequence",
     "!Split",
     "!Split sequence"
-  ]
+  ], 
+  "plantuml.diagramsRoot": "docs/uml",
+  "plantuml.exportFormat": "png",
+  "plantuml.render": "PlantUMLServer",
+  "plantuml.server": "http://localhost:8080/",
+  "plantuml.java": "/usr/bin/java",
+  "plantuml.commandArgs": [
+  
+  ],
+  "plantuml.exportOutDir": "docs/images"
 }
